@@ -3,7 +3,7 @@
 
 ### Địa chỉ ứng dụng 🚀
 Bạn có thể truy cập ứng dụng thông qua trình duyệt trên PC hay smartphone qua địa chỉ sau:  
-https://licham.github.io/licham/
+https://copthuy.github.io/amlich
 
 ### Thông tin chi tiết 📚
 - Dựa trên công trình nghiên cứu của Hồ Ngọc Đức tại địa chỉ:  

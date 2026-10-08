@@ -1,0 +1,208 @@
+@import "./global.css";
+@import "./main.css";
+@import "./panel.css";
+@import "./data.css";
+
+@media screen and (max-width: 949px) {
+  .leaf > .nav .toggle-calendar {
+    display: inline-block;
+  }
+  .main {
+    border-radius: 0.75rem;
+  }
+  .panel {
+    border-radius: 0.75rem;
+    z-index: 2;
+    left: 0;
+    display: none;
+  }
+  .panel-show .panel {
+    background: #fff;
+    display: block;
+  }
+  .user-event-show .panel {
+    background: #fff;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 510px), screen and (max-height: 510px) and (orientation: landscape) {
+  .leaf {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(0deg, white 25%, transparent);
+  }
+  .leaf > .nav button {
+    padding: 1rem 0.75rem 0.75rem;
+  }
+  .leaf > .nav button svg {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+  .main,
+  .panel {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .day-header .cell:first-child {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 430px), screen and (max-height: 430px) and (orientation: landscape) {
+  .year {
+    font-size: 2rem;
+    padding-top: 1rem;
+  }
+  .dow {
+    font-size: 2rem;
+  }
+  .bottom {
+    padding: 1.5rem 0.5rem;
+  }
+  .ngay {
+    padding: 0 0.5rem;
+  }
+  .cell {
+    font-size: 1rem;
+  }
+  .cell i {
+    font-size: 0.5em;
+  }
+}
+
+@media screen and (max-width: 320px), screen and (max-height: 320px) and (orientation: landscape) {
+  .leaf > .nav button {
+    padding: 0.95rem 0.75rem 0.5rem;
+  }
+  .leaf > .nav button svg {
+    width: 1rem;
+    height: 1rem;
+  }
+  .day {
+    font-size: 12rem;
+    margin-top: -1rem;
+    margin-bottom: 0.5rem;
+  }
+  .ngay {
+    font-size: 2.5rem;
+  }
+  .bottom {
+    font-size: 0.75rem;
+  }
+  .bottom h5 {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-height: 510px) and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  input,
+  select,
+  label,
+  button {
+    color: #b9b9b9;
+  }
+  body {
+    background-color: #000;
+  }
+  .main {
+    background: rgba(0, 0, 0, 0.75);
+  }
+  .year,
+  .day,
+  .dow,
+  .ngay {
+    color: var(--main-color-dark);
+  }
+  .sat .year,
+  .sat .day,
+  .sat .dow,
+  .sat .ngay {
+    color: var(--sat-color-dark);
+  }
+  .sun .year,
+  .sun .day,
+  .sun .dow,
+  .sun .ngay {
+    color: var(--sun-color-dark);
+  }
+  .day {
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  }
+  .dow,
+  .ngay {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+  .panel {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .panel::before {
+    opacity: 0.4;
+  }
+  .selector button,
+  .selector input,
+  .selector select {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .cell {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .day-header .cell {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .cell.today {
+    color: var(--main-color-dark);
+  }
+  .cell:first-child {
+    color: var(--sun-color-dark);
+  }
+  .cell:last-child {
+    color: var(--sun-color-dark);
+  }
+  .cell.event::before {
+    background: var(--sun-color-dark);
+  }
+  .leaf > .nav button {
+    color: #b9b9b9;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .user-events {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .user-events table tr th {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 0.5px #333;
+  }
+  .user-events table tr th,
+  .user-events table tr td {
+    border-color: #333;
+  }
+  .leaf > .nav button:hover {
+    background: var(--main-color-dark);
+  }
+}
+
+@media screen and (max-width: 949px) and (prefers-color-scheme: dark) {
+  .panel-show .panel {
+    background: #000;
+  }
+  .user-event-show .panel {
+    background: #000;
+  }
+}

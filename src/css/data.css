@@ -1,0 +1,84 @@
+.user-event-show .user {
+  height: 100%;
+  display: flex;
+}
+
+.user-event-show .selector,
+.user-event-show .calendar {
+  display: none;
+}
+
+.user {
+  display: none;
+  flex-direction: column;
+}
+
+.user-events {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  flex-grow: 1;
+  position: relative;
+}
+
+.user-events > div {
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.user-events table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-events table tr {
+  width: 100%;
+}
+
+.user-events table tr > *:first-child {
+  width: 6rem;
+}
+
+.user-events table tr th {
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.75rem 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 0 0.5px #ddd;
+}
+
+.user-events table tr td {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ddd;
+}
+
+.user-events table tr td:empty ~ .remove-event button {
+  display: none;
+}
+
+.user-events .remove-event {
+  text-align: center;
+  width: 0.8rem;
+}
+
+.user-events .remove-event button {
+  color: rgba(0, 0, 0, 0.2);
+  padding: 0;
+  transition: color 0.3s ease-in;
+}
+
+.user-events .remove-event button:hover {
+  color: var(--sun-color);
+}
+
+.user-events .remove-event svg {
+  width: 0.7rem;
+  height: 0.7rem;
+}

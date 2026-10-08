@@ -1,0 +1,131 @@
+.panel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 0 0.75rem 0.75rem 0;
+  box-shadow: 0 0.25rem 1.5rem 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 1;
+  backdrop-filter: blur(5px);
+}
+
+.panel::before {
+  content: url(../images/blossom.png);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.25;
+  z-index: -1;
+}
+
+.selector {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.selector select,
+.selector input,
+.selector button {
+  height: 2.25rem;
+  margin: 0 0 0 0.25rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(0, 0, 0, 0.05);
+  border: 0 none;
+  border-radius: 0.25rem;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.selector select:first-child,
+.selector input:first-child,
+.selector button:first-child {
+  margin-left: 0;
+}
+
+.selector input {
+  width: 5rem;
+}
+
+.calendar {
+  margin-bottom: 3rem;
+}
+
+.calendar table {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.day-header {
+  box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.4);
+}
+
+.day-header .cell {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1rem 0;
+}
+
+.day-header .cell:first-child {
+  padding-left: 0.75rem;
+}
+
+.cell {
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 1;
+  text-align: center;
+  width: calc(100% / 7);
+  padding: 1rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  transition: background-color 0.4s ease-in;
+}
+
+.cell.today {
+  color: var(--main-color);
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.cell.selected {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 0 15px var(--main-color);
+}
+
+.cell.event::before {
+  width: 0.35rem;
+  height: 0.35rem;
+  content: "";
+  border-radius: 50%;
+  background: var(--sun-color);
+  box-shadow: 0 0 0.25rem 0 rgb(255, 0, 0);
+  display: block;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+.cell:not(:empty):not(th):hover {
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.cell:first-child {
+  color: var(--sun-color);
+}
+
+.cell:last-child {
+  color: var(--sat-color);
+}
+
+.cell i {
+  font-style: normal;
+  font-size: 0.45em;
+  position: absolute;
+  right: 0.25rem;
+  bottom: 0.25rem;
+}
